@@ -1,0 +1,20 @@
+@import 'compass/reset';
+
+@import 'partials/variables',
+        'partials/helpers',
+        'partials/typo',
+        'partials/layout',
+        'partials/menu',
+        'partials/elements',
+        'partials/animations';
+
+
+body,
+html{
+    height: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
