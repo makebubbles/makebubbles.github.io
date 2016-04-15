@@ -2,19 +2,11 @@
 
 @import 'partials/variables',
         'partials/helpers',
+        'partials/base',
         'partials/typo',
         'partials/layout',
-        'partials/menu',
+        'partials/aside',
         'partials/elements',
-        'partials/animations';
-
-
-body,
-html{
-    height: 100%;
-}
-
-*{
-    box-sizing: border-box;
-}
+        'partials/animations',
+        'partials/landing';
 

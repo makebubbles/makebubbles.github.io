@@ -9,9 +9,10 @@
 }
 
 body{
-    @include set-font(Montserrat, 400, $color-dark, 10vw);
+    @include set-font(Montserrat, 400, $color-dark);
     
     background-color: $color-light;
+    font-size: 16px;
     line-height: 1;
 }
 
@@ -21,9 +22,9 @@ h1{
     font-weight: bold;
     line-height: 1;
     
+    @include set-font(null, null, null, 10vw);
     @include respond-to('small'){
         font-size: 48px;
-        padding-right: 20%;
     }
 }
 
