@@ -4,6 +4,6 @@ $(function() {
         $("#app").i18n();
         var appName = t("app.name");
 
-        load:'unspecific'
+        load:'en'
     });
 });

@@ -18,6 +18,10 @@ $navbar-height: 80px;
                 color: $color-light;
                 font-size: 16px;
 
+                @include respond-to('small'){
+                    padding: 0 15%;
+                }
+
                 &:hover{
                     background-color: $color-module;
                 }
