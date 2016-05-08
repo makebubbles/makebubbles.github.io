@@ -4,7 +4,6 @@ $(function() {
 
 $(document).ready(function(){
     i18n.init({
-            lng: 'en',
             fallbackLng: 'en',
             load: 'unspecific'
         }, function () {
