@@ -1,13 +1,18 @@
 $(function() {
-    // i18n.init({ load: 'unspecific' });
-    i18n.init(function(err, t) {
-        $("#app").i18n();
-        var appName = t("app.name");
-        load:'en'
-    });
+
 });
 
 $(document).ready(function(){
+    i18n.init({
+            lng: 'en',
+            fallbackLng: 'en',
+            load: 'unspecific'
+        }, function () {
+	       $('#app').i18n(); // Run translation
+    });
+
+    $("#app").i18n();
+
     var language = i18n.detectLanguage();
     $('.language-switcher > span').text(language);
 
