@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/i18next-1.11.2.min.js"></script>
+</head>
+<body id="app">
+    <ul>
+        <li><a href="?setLng=en">EN</li>
+        <li><a href="?setLng=de">DE</li>
+    </ul>
+    <ul class="nav">
+        <li><a href="#" data-i18n="nav.home"></a></li>
+        <li><a href="#" data-i18n="nav.page1"></a></li>
+        <li><a href="index.html" data-i18n="nav.page2"></a></li>
+    </ul>
+
+    <script>
+        i18n.init(function(err, t) {
+          $("#app").i18n();
+
+          var appName = t("app.name");
+        });
+    </script>
+</body>
+</html>
