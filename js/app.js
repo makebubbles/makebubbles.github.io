@@ -9,6 +9,7 @@ $(function() {
 
 $(document).ready(function(){
     var language = i18n.detectLanguage();
+    $('.language-switcher > span').text(language);
 
     var links = document.getElementsByClassName("lang-link");
     for(var i=0; i < links.length; i++)

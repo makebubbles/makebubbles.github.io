@@ -60,24 +60,71 @@ $navbar-height: 80px;
 
     .language-switcher{
         position: relative;
+        width: $navbar-height;
+        height: $navbar-height;
+        cursor: pointer;
 
-        >div{
-            height: 80px;
-            width: 80px;
+        >span{
+            color: $color-light;
+            text-align: center;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        >span,
+        i{
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .icon-language{
+            background: url('../img/icon-language.svg') no-repeat center;
+            background-size: contain;
+            width: 20px;
+            height: 20px;
+            margin: 0 5px 0 10px;
         }
 
         >ul{
+            @include transition;
+
+            visibility: hidden;
+            opacity: 0;
+
+            &.visible{
+                visibility: visible;
+                opacity: 1;
+            }
+
             position: absolute;
-            top: 100%;
+            top: calc(100% + 20px);
+            top: -moz-calc(100% + 20px);
             left: 0;
             right: 0;
 
+            &:before{
+                content: '';
+                position: absolute;
+                top: -20px;
+                left: calc(50% - 10px);
+                left: -moz-calc(50% - 10px);
+                border-top: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid $color-dark;
+                border-left: 10px solid transparent;
+            }
+
             >li{
-                height: 40px;
                 display: block;
 
                 a{
                     line-height: 40px;
+                    background-color: $color-dark;
+                    font-size: 14px;
+                    padding: 0;
+                    text-align: center;
+                    border-radius: 2px;
+                    height: 40px;
                 }
             }
         }
