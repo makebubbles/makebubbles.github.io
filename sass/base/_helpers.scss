@@ -1,0 +1,46 @@
+.clearfix{
+    &:after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+$breakpoints: (
+    'xsmall' : 460px,
+    'small'  : 767px,
+    'medium' : 992px,
+    'large'  : 1200px
+);
+
+@mixin respond-to($breakpoint){
+    $value: map-get($breakpoints, $breakpoint);
+
+    @if $value != null{
+        @media (max-width: $value){
+            @content;
+        }
+    }
+
+    @else{
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+.container-fluid{
+    padding: 0 $gutter;
+    @include respond-to('medium'){
+        padding: 0 $gutter / 2;
+    }
+    @include respond-to('small'){
+        padding: 0 15px;
+    }
+}
+
+@mixin transition($time: null, $effect: null){
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}

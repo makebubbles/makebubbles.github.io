@@ -1,0 +1,49 @@
+$navbar-height: 80px;
+
+.navbar{
+    @extend .clearfix;
+    @extend .container-fluid;
+
+    background-color: $color-dark;
+
+    >ul{
+        >li{
+            float: left;
+
+            a{
+                @include transition;
+
+                display: block;
+                padding: 0 20px;
+                color: $color-light;
+                font-size: 16px;
+
+                &:hover{
+                    background-color: $color-module;
+                }
+            }
+        }
+    }
+
+    .navbar-left,
+    .navbar-right{
+        height: $navbar-height;
+        line-height: $navbar-height;
+    }
+
+    .navbar-left{
+        float: left;
+
+        .logo{
+            display: inline-block;
+            background: url('../img/logo-navbar.png') no-repeat center;
+            background-size: contain;
+            width: 60px;
+            height: $navbar-height;
+        }
+    }
+
+    .navbar-right{
+        float: right;
+    }
+}
