@@ -35,15 +35,47 @@ $navbar-height: 80px;
         float: left;
 
         .logo{
+            @include transition;
+
             display: inline-block;
             background: url('../img/logo-navbar.png') no-repeat center;
             background-size: contain;
             width: 60px;
             height: $navbar-height;
+
+            &:hover{
+                transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
+            }
         }
     }
 
     .navbar-right{
         float: right;
+    }
+
+    .language-switcher{
+        position: relative;
+
+        >div{
+            height: 80px;
+            width: 80px;
+        }
+
+        >ul{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+
+            >li{
+                height: 40px;
+                display: block;
+
+                a{
+                    line-height: 40px;
+                }
+            }
+        }
     }
 }

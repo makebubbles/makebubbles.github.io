@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
     <link href="css/style.css" type="text/css" rel="stylesheet"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/i18next-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <title data-i18n="">Home</title>
 </head>
 <body id="app">
     <header class="navbar">
@@ -15,28 +16,15 @@
         <ul class="navbar-right">
             <li><a href="#" data-i18n="nav.home"></a></li>
             <li><a href="about.html" data-i18n="nav.about"></a></li>
-            <!-- <li class="language-switcher">
-                <div></div>
-                <ul>
-                    <li><a href="?setLng=en">EN</a></li>
-                    <li><a href="?setLng=de">DE</a></li>
-                </ul>
-            </li> -->
+            <li><a href="?setLng=en">EN</a></li>
+            <li><a href="?setLng=de">DE</a></li>
         </ul>
     </header>
 
     <div class="content">
-        <h1>i18next JS localization example</h1>
-        <h2>Keep in mind few things.</h2>
-        <p></p>
+        <h1 data-i18n="home.h1"></h1>
+        <h2 data-i18n="home.h2"></h2>
+        <p data-i18n="home.p"></p>
     </div>
-
-    <script>
-        i18n.init(function(err, t) {
-          $("#app").i18n();
-
-          var appName = t("app.name");
-        });
-    </script>
 </body>
 </html>
