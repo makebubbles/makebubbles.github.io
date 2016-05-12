@@ -4,13 +4,12 @@ $(function() {
 
 $(document).ready(function(){
     i18n.init({
+            defaultValue: 'en',
             fallbackLng: 'en',
             load: 'unspecific'
         }, function () {
 	       $('#app').i18n(); // Run translation
     });
-
-    $("#app").i18n();
 
     var language = i18n.detectLanguage();
     $('.language-switcher > span').text(language);
