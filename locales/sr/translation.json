@@ -1,0 +1,23 @@
+{
+    "app": {
+        "name": "i18next"
+    },
+    "title": {
+            "home": "Home [SR]",
+            "about": "About [SR]"
+    },
+    "nav": {
+        "home": "Home [SR]",
+        "about": "About [SR]"
+    },
+    "home": {
+        "h1": "i18next JS localization example [SR]",
+        "h2": "Keep in mind few things. [SR]",
+        "p": "Random generated text [SR]"
+    },
+    "about": {
+        "h1": "About page [SR]",
+        "p1": "Sweet fruitcake cake liquorice pie. Sugar plum powder danish chocolate. Lemon drops chupa chups dragée. Sesame snaps croissant icing brownie gingerbread tart bear claw sweet roll gummi bears. [SR]",
+        "p2": "Gummi bears powder dragée cake biscuit liquorice sugar plum jujubes brownie. Biscuit danish lemon drops candy canes pastry danish. Pudding cotton candy tart. [SR]"
+    }
+}

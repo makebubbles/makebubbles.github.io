@@ -3,3 +3,138 @@
 
     margin-top: 80px;
 }
+
+.contact-form{
+    margin: 40px auto;
+
+    ul{
+        @extend .clearfix;
+
+        li{
+            float: left;
+            margin-bottom: 20px;
+            width: calc(50% - 10px);
+            width: -moz-calc(50% - 10px);
+            width: -webkit-calc(50% - 10px);
+
+            &:nth-of-type(2){
+                float: right;
+            }
+
+            &.block{
+                display: block;
+                float: none;
+                width: 100%;
+                margin: 0 0 20px 0;
+
+                button{
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+
+            &:last-of-type{
+                margin-bottom: 0 !important;
+            }
+
+            @include respond-to('xsmall'){
+                display: block;
+                float: none;
+                width: 100%;
+                margin: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+%input-settings{
+    @extend %main-font;
+    @include transition;
+
+    border: 1px solid #f2f2f2;
+    padding: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:focus{
+        outline: 0;
+        box-shadow: 0px 5px 15px 5px #f2f2f2;
+    }
+}
+
+%button-settings{
+    @extend %main-font;
+    @include transition;
+
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    background-color: $color-module;
+    color: $color-light;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 4px;
+
+    &:hover{
+        background-color: lighten($color-module, 5%);
+
+        &:before{
+            transform: rotate(37deg);
+        }
+    }
+
+    &:active{
+        transform: translateY(2px);
+    }
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+    @extend %input-settings;
+}
+
+textarea{
+    min-height: 150px;
+    max-width: 100%;
+}
+
+button{
+    @extend %button-settings;
+
+    position: relative;
+    padding-left: 60px;
+
+    &:before{
+        @include transition;
+
+        will-change: transform;
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: url("../img/icon-plane.svg") no-repeat center;
+    }
+}
+
+// input placeholder vendor
+::-webkit-input-placeholder {
+   color: #d2d2d2;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #f2f2f2;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #f2f2f2;
+}
+
+:-ms-input-placeholder {
+   color: #f2f2f2;
+}
