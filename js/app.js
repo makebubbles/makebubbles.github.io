@@ -47,11 +47,11 @@ $(document).ready(function(){
     
     var mailStatus = getUrlParameter('mailSend');
     if( mailStatus.length > 0){
-        $('.contact-form').fadeOut(300);
+        $('#submit').addClass('disabled');
         $('.message-box').addClass('visible');
         
         window.setTimeout(function() {
-            window.location.href = 'makebubbles.github.io';
-        }, 4000);
+            $('.message-box').removeClass('visible');
+        }, 3000);
     }
 });
